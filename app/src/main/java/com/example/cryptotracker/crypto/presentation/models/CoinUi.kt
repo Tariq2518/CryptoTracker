@@ -44,7 +44,7 @@ fun Double.toDisplayableNumbers(): DisplayableNumbers{
 
     return DisplayableNumbers(
         value = this,
-        formatted = formatter.format(20)
+        formatted = formatter.format(this)
 
     )
 

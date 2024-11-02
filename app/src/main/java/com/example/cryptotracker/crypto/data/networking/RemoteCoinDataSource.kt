@@ -1,5 +1,6 @@
 package com.example.cryptotracker.crypto.data.networking
 
+import android.util.Log
 import com.example.cryptotracker.core.data.networking.constructUrl
 import com.example.cryptotracker.core.data.networking.safeCall
 import com.example.cryptotracker.core.domain.util.NetworkError
@@ -21,6 +22,7 @@ class RemoteCoinDataSource(
                 urlString = constructUrl("assets")
             )
         }.map { response ->
+            Log.i("TAG", "getCoins: $response ")
             response.data.map { it.toCoin() }
         }
     }

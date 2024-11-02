@@ -41,6 +41,7 @@ fun CoinListScreen(
 
         ) {
             items(state.coins){ coinUi ->
+
                 CoinListItem(
                     coinUi = coinUi,
                     onClick = {},
